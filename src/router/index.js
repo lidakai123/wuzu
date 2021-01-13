@@ -4,6 +4,10 @@ import takeOut from "@/views/take-out/index"
 import My from "@/views/My/index"
 import Search from "@/views/Search/index"
 
+
+import center from './routers/center'
+import filmRouter from "./routers/film";
+import cinemaRouter from "./routers/cinema";
 Vue.use(VueRouter)
 
 const routes = [{
@@ -23,6 +27,9 @@ const routes = [{
     component: Search,
   },
 
+  ...center,
+  ...filmRouter,
+  cinemaRouter,
 ]
 
 const router = new VueRouter({
